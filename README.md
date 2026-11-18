@@ -147,4 +147,4 @@ MIT (see `LICENSE`). Please cite the paper above when using this code.
 
 ## Contact
 
-Saverio Mancino (saverio.mancino@uniba.it), Giuseppe Amatulli (giuseppe.amatulli@yale.edu)
+Saverio Mancino (saveriomancino1@gmail.com | saverio.mancino@uniba.it), Giuseppe Amatulli (giuseppe.amatulli@yale.edu)
