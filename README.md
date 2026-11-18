@@ -1,4 +1,4 @@
-# Ensemble machine-learning global landslide susceptibility (GLS)
+# GLaSs - Ensemble machine-learning global landslide susceptibility (GLS)
 
 Code accompanying:
 
