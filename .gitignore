@@ -1,0 +1,12 @@
+data/
+work/
+logs/*
+!logs/.gitkeep
+config/*.local.*
+__pycache__/
+*.pyc
+*.joblib
+*.pkl
+*.tif
+*.vrt
+.ipynb_checkpoints/

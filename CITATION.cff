@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "GLS: ensemble machine-learning global landslide susceptibility"
+type: software
+license: MIT
+version: 1.0.0
+doi: "10.5281/zenodo.XXXXXXX"
+authors:
+  - family-names: Mancino
+    given-names: Saverio
+    email: saverio.mancino@uniba.it
+    affiliation: University of Bari Aldo Moro
+  - family-names: Colacicco
+    given-names: Rosa
+  - family-names: Lovergine
+    given-names: Francesco Paolo
+  - family-names: Sethi
+    given-names: Tushar
+  - family-names: Lindorfer
+    given-names: Roland
+  - family-names: Wagner
+    given-names: Wolfgang
+  - family-names: Capolongo
+    given-names: Domenico
+  - family-names: Amatulli
+    given-names: Giuseppe
+    email: giuseppe.amatulli@yale.edu
+preferred-citation:
+  type: article
+  title: "Ensemble Machine Learning-Based Global Landslide Susceptibility From A Unified Global Inventory"
+  journal: "Earth System Science Data"
+  year: 2026
+  doi: "10.5194/essd-XXXX"
+  authors:
+    - family-names: Mancino
+      given-names: Saverio
+    - family-names: Colacicco
+      given-names: Rosa
+    - family-names: Lovergine
+      given-names: Francesco Paolo
+    - family-names: Sethi
+      given-names: Tushar
+    - family-names: Lindorfer
+      given-names: Roland
+    - family-names: Wagner
+      given-names: Wolfgang
+    - family-names: Capolongo
+      given-names: Domenico
+    - family-names: Amatulli
+      given-names: Giuseppe

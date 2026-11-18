@@ -1,0 +1,14 @@
+name: gls
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn=1.9.1
+  - shap=0.54.1
+  - matplotlib
+  - shapely>=2
+  - joblib
+  - gdal
