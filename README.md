@@ -1,5 +1,8 @@
 # GLaSs - Ensemble machine-learning global landslide susceptibility (GLS)
 
+![10km_map_preview](ENSAMBLE_preview.png)
+
+
 Code accompanying:
 
 > Mancino, S., Colacicco, R., Lovergine, F. P., Sethi, T., Lindorfer, R., Wagner, W.,
