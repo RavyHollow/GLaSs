@@ -92,6 +92,7 @@ site-specific paths and a `gls_setup_env` function (module loads) in
 Submit from the repository root (log files go to `logs/`):
 
 ```bash
+mkdir logs
 # UGLC inputs and ring-buffer radii
 bash scripts/00_make_tile_list.sh
 bash slurm/python_job.sh scripts/01_uglc_points.py
