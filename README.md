@@ -5,16 +5,12 @@
 
 Code accompanying:
 
-> Mancino, S., Colacicco, R., Lovergine, F. P., Sethi, T., Lindorfer, R., Wagner, W.,
-> Capolongo, D., and Amatulli, G.: Ensemble Machine Learning-Based Global Landslide
-> Susceptibility From A Unified Global Inventory, Earth Syst. Sci. Data, [DOI].
+> Mancino, S., Colacicco, R., Lovergine, F. P., Sethi, T., Lindorfer, R., Wagner, W., Capolongo, D., and Amatulli, G.: Ensemble Machine Learning-Based Global Landslide Susceptibility From A Unified Global Inventory, Earth Syst. Sci. Data, [DOI].
 
-The pipeline builds two Random Forest classifiers from the Unified Global Landslide
-Catalogue (UGLC) and 52 geo-environmental predictors on a 90 m grid, using two
-pseudo-absence schemes (Unconstrained and Slope Constrained), and merges them into an
-ensemble global susceptibility map (0–100).
+The pipeline builds two Random Forest classifiers from the Unified Global Landslide Catalogue (UGLC) and 52 geo-environmental predictors on a 90 m grid, using two pseudo-absence schemes (Unconstrained and Slope Constrained), and merges them into an ensemble global susceptibility map (0–100).
 
-Archived release: [Zenodo DOI]. Susceptibility maps: [data DOI].
+Archived release: [Zenodo DOI]. 
+Susceptibility maps: [data DOI].
 
 ## Repository layout
 
@@ -144,8 +140,15 @@ records in the input tables.
 
 ## Licence
 
-MIT (see `LICENSE`). Please cite the paper above when using this code.
+The code in this repository and the susceptibility map ([data DOI]) are released under the Creative Commons Attribution-NonCommercial 4.0 International License ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/); see `LICENSE`):
+they may be shared and adapted with appropriate credit, for non-commercial purposes.
+Commercial use requires the prior written permission of the copyright holders.
+The paper is published under CC BY 4.0. Please cite the paper above when using this code or the map.
 
 ## Contact
 
 Saverio Mancino (saveriomancino1@gmail.com | saverio.mancino@uniba.it), Giuseppe Amatulli (giuseppe.amatulli@yale.edu)
+
+
+
+
