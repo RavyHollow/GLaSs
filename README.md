@@ -140,10 +140,14 @@ records in the input tables.
 
 ## Licence
 
-The code in this repository and the susceptibility map ([data DOI]) are released under the Creative Commons Attribution-NonCommercial 4.0 International License ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/); see `LICENSE`):
-they may be shared and adapted with appropriate credit, for non-commercial purposes.
-Commercial use requires the prior written permission of the copyright holders.
-The paper is published under CC BY 4.0. Please cite the paper above when using this code or the map.
+Copyright (c) 2026 Saverio Mancino, Rosa Colacicco, Francesco Paolo Lovergine, Tushar Sethi, Roland Lindorfer, Wolfgang Wagner, Domenico Capolongo, Giuseppe Amatulli.
+
+The code in this repository and the susceptibility map ([data DOI]) are released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); see `LICENSE`).
+You are free to share and adapt the material for non-commercial purposes, provided that appropriate credit is given, any modifications are indicated, and derivative works are distributed under the same license or a Creative Commons BY-NC-SA compatible license.
+
+Commercial use requires prior written permission from the copyright holders.
+
+The associated paper is published under the Creative Commons Attribution 4.0 International License (CC BY 4.0). Please cite the paper and this repository when using this code or the susceptibility map.
 
 ## Contact
 
