@@ -29,8 +29,8 @@ preferred-citation:
   type: article
   title: "Ensemble machine-learning-based global landslide susceptibility from a unified global inventory"
   journal: "Earth System Science Data"
-  year: 2026
-  doi: "under submission (nov 2026)"
+  year: 2026 (under submission, nov 2026)
+  #doi: ""
   authors:
     - family-names: Mancino
       given-names: Saverio
