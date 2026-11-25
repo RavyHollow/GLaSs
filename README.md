@@ -9,8 +9,8 @@ Code accompanying:
 
 The pipeline builds two Random Forest classifiers from the Unified Global Landslide Catalogue (UGLC) and 52 geo-environmental predictors on a 90 m grid, using two pseudo-absence schemes (Unconstrained and Slope Constrained), and merges them into an ensemble global susceptibility map (0–100).
 
-Archived release: [Zenodo DOI]. 
-Susceptibility maps: [data DOI].
+Archived release: [[Zenodo DOI](https://doi.org/10.5281/zenodo.24503107)]. 
+Susceptibility maps: [[data DOI](https://doi.org/10.5281/zenodo.24463265)].
 
 ## Repository layout
 
@@ -62,26 +62,16 @@ per parent model. Step 15 maps the ensemble model (and, optionally, each parent)
 
 - GDAL ≥ 3.1 (command-line tools and `gdal_calc.py`), GRASS GIS, pktools
 - Python 3.11 environment: `conda env create -f environment.yml`
-- pyjeo for the map prediction (step 15); the interpreter is set by
-  `gls_pyjeo_python` in `config/config.sh` (e.g. a container)
-- An HPC scheduler is recommended (scripts carry SLURM headers; every step also runs
-  with `bash`, tile-based steps taking the tile index as last argument).
+- pyjeo for the map prediction (step 15); the interpreter is set by `gls_pyjeo_python` in `config/config.sh` (e.g. a container)
+- An HPC scheduler is recommended (scripts carry SLURM headers; every step also runs with `bash`, tile-based steps taking the tile index as last argument).
 
 ## Input data
 
-- UGLC point and polygon layers (CSV) as published with Mancino et al. (2026),
-  https://doi.org/10.5194/essd-18-4697-2026; fields used: `ID`, `WKT_GEOM`,
-  `RELIABILITY`, `TYPE`, `PHYSICAL FACTORS` (see `UGLC_*` in `config/config.sh`)
-- The 52 predictors as global 90 m rasters (sources and native resolutions in Table A1
-  of the paper), listed in `config/predictors.tsv`
-- Permanent ice and permanent water masks at 90 m (1 = not ice / not water), derived
-  from the ESA CCI Land Cover classes 220 (permanent snow and ice) and 210 (water
-  bodies), permanent over 1992–2018
+- UGLC point and polygon layers (CSV) as published with Mancino et al. (2026), https://doi.org/10.5194/essd-18-4697-2026; fields used: `ID`, `WKT_GEOM`,`RELIABILITY`, `TYPE`, `PHYSICAL FACTORS` (see `UGLC_*` in `config/config.sh`)
+- The 52 predictors as global 90 m rasters (sources and native resolutions in Table A1 of the paper), listed in `config/predictors.tsv`
+- Permanent ice and permanent water masks at 90 m (1 = not ice / not water), derived from the ESA CCI Land Cover classes 220 (permanent snow and ice) and 210 (water bodies), permanent over 1992–2018
 
-Set the paths in section 1 of `config/config.sh` (`DATA_DIR`, `WORK_DIR`,
-`PREDICTOR_DIR`, …) and the raster paths in `config/predictors.tsv`, or put
-site-specific paths and a `gls_setup_env` function (module loads) in
-`config/config.local.sh`, which is read before `config.sh` and ignored by git.
+Set the paths in section 1 of `config/config.sh` (`DATA_DIR`, `WORK_DIR`, `PREDICTOR_DIR`, …) and the raster paths in `config/predictors.tsv`, or put site-specific paths and a `gls_setup_env` function (module loads) in `config/config.local.sh`, which is read before `config.sh` and ignored by git.
 
 ## Running
 
@@ -128,26 +118,22 @@ j19=$(sbatch --parsable scripts/19_polygon_zonal.sh ensemble)
 sbatch --dependency=afterok:$j19 slurm/python_job.sh scripts/20_polygon_statistics.py ensemble
 ```
 
-Any other map in the same tile layout (e.g. NASA-GLS resampled to the 90 m tiles,
-stored as `$MAP_DIR/nasa_gls/susceptibility_<TILE>.tif`) goes through steps 16, 19 and
-20 in the same way; `--native` in step 20 uses its values directly as classes.
+Any other map in the same tile layout (e.g. NASA-GLS resampled to the 90 m tiles,stored as `$MAP_DIR/nasa_gls/susceptibility_<TILE>.tif`) goes through steps 16, 19 and 20 in the same way; `--native` in step 20 uses its values directly as classes.
 
 ## Reproducibility
 
-All random operations use `SEED` (default 42). Exact reproduction of the published
-numbers also depends on the software versions listed in the paper and on the order of
-records in the input tables.
+All random operations use `SEED` (default 42). Exact reproduction of the published numbers also depends on the software versions listed in the paper and on the order of records in the input tables.
 
 ## Licence
 
 Copyright (c) 2026 Saverio Mancino, Rosa Colacicco, Francesco Paolo Lovergine, Tushar Sethi, Roland Lindorfer, Wolfgang Wagner, Domenico Capolongo, Giuseppe Amatulli.
 
-The code in this repository and the susceptibility map ([data DOI]) are released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); see `LICENSE`).
-You are free to share and adapt the material for non-commercial purposes, provided that appropriate credit is given, any modifications are indicated, and derivative works are distributed under the same license or a Creative Commons BY-NC-SA compatible license.
+The code in this repository and the susceptibility map ([[data DOI](https://doi.org/10.5281/zenodo.24463265)]) are released under the Creative Commons Attribution-NonCommercial 4.0 International License ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/); see `LICENSE`).
 
 Commercial use requires prior written permission from the copyright holders.
 
-The associated paper is published under the Creative Commons Attribution 4.0 International License (CC BY 4.0). Please cite the paper and this repository when using this code or the susceptibility map.
+The associated paper is published under the Creative Commons Attribution -NonCommercial 4.0 International License (CC BY-NC 4.0). 
+Please cite the paper and this repository when using this code or the susceptibility map.
 
 ## Contact
 
