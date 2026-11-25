@@ -1,4 +1,4 @@
-# GLaSs - Ensemble machine-learning global landslide susceptibility (GLS)
+# GLaSs - Ensemble machine-learning global landslide susceptibility
 
 ![10km_map_preview](ENSAMBLE_preview.png)
 
